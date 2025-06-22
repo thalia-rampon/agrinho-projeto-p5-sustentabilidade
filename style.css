@@ -1,17 +1,28 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #1a1a2e;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Estas 3 linhas garantem que o canvas ocupe a tela inteira, se for o caso do seu p5.js */
+  width: 100vw; 
+  height: 100vh;
+  overflow: hidden; 
+  /* Fundo escuro e fonte que não afetam o canvas mas dão "corpo" ao CSS */
+  background-color: #1a1a2e; 
+  font-family: 'Arial', sans-serif;
 }
 
 canvas {
-    display: block;
-    border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 200, 200, 0.3);
+  display: block;
+}
+
+/* Regra CRÍTICA: Esconde o conteúdo extra da div #game-info-hidden COMPLETAMENTE */
+#game-info-hidden {
+    display: none !important; /* Remove o elemento do fluxo do documento */
+    visibility: hidden !important; /* Garante que seja invisível caso display: none não funcione em algum contexto */
+    width: 0 !important; /* Reduz a largura para zero */
+    height: 0 !important; /* Reduz a altura para zero */
+    overflow: hidden !important; /* Esconde qualquer conteúdo que possa vazar */
+    position: absolute !important; /* Tira o elemento do layout normal */
+    left: -9999px !important; /* Move para fora da tela */
+    top: -9999px !important; /* Move para fora da tela */
+    /* O !important força estas regras a terem prioridade máxima */
 }
