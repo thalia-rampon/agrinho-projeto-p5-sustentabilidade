@@ -1,4 +1,5 @@
-O "Eco-Aventuras é uma coleção de mini-games que ensina sobre sustentabilidade de forma criativa e divertida.
+Olá! Me chamo **Thalia Rampon** e esse é o meu projeto para o Agrinho, usando programação com **p5.js**.
+Sou estudante do Ensino Médio e o meu projeto "Eco-Aventuras é uma coleção de mini-games que ensina sobre sustentabilidade de forma criativa e divertida.
 
 
 
